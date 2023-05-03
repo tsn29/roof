@@ -1,0 +1,28 @@
+<aside class="catalog-sidebar catalog__sidebar">
+							<div class="catalog-sidebar__content">
+								<div class="catalog-sidebar__title">Каталог</div>
+								<ul class="catalog-sidebar__list">
+								{% for category in categories %}
+									<li class="catalog-sidebar__item">
+										<button class="catalog-sidebar__btn">{{ category.name }}</button>
+										{% if category.children %}
+										<ul class="catalog-sidebar__sublist">
+											{% for child in category.children %}
+											<li class="catalog-sidebar__subitem">
+												<label class="checkbox">
+													<input class="checkbox__input" type="checkbox">
+													<span class="checkbox__switch"></span>
+													<span class="checkbox__text">{{ child.name }}</span>
+												</label>
+											</li>
+											{% endfor %}
+
+										</ul>
+										{% endif %}
+									</li>
+								{% endfor %}
+
+								</ul>
+								<div class="catalog-sidebar__close js-close-catalog-sidebar"></div>
+							</div>
+						</aside>

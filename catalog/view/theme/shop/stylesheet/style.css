@@ -1,0 +1,23 @@
+.menu__item.menu__item--has-submenu:hover .submenu{
+display:block;
+margin-top:0;
+}
+
+.product__main-img{
+	width:100%;
+}
+
+#cart-total{
+	display:inline-block;
+	position:absolute;
+	width:16px;
+	height:16px;
+	line-height:16px;
+	text-align:center;
+	color:#fff;
+	background-color:#005cb6;
+	font-size:11px!important;
+	margin-left:22px;
+	margin-top:16px;
+	border-radius:8px;
+}
